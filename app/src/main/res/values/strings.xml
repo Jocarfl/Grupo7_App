@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AppG7</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
+
+    <string name="fui_default_toolbar_title">APP G7</string>
+    <string name="fui_sign_in_with_email">Entra con tu correo</string>
+    <string name="fui_progress_dialog_signing_up">Creando cuenta...</string>
+
+</resources>
