@@ -3,6 +3,7 @@ package grupo7.com.appg7;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,7 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,13 +81,23 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        FragmentManager fragmentManager=getSupportFragmentManager();
+
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new Fragments01()).commit();
+
         } else if (id == R.id.nav_gallery) {
+
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new Fragments02()).commit();
 
         } else if (id == R.id.nav_slideshow) {
 
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new Fragments03()).commit();
+
         } else if (id == R.id.nav_manage) {
+
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new Fragments04()).commit();
 
         } else if (id == R.id.nav_share) {
 
