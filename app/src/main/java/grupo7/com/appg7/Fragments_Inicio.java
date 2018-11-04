@@ -24,7 +24,7 @@ import android.view.ViewGroup;
                                  Bundle savedInstanceState) {
 
             View view=inflater.inflate(R.layout.fragment_inicio, container, false);
-
+            //agregado menú tabs
             View contenedor=(View)container.getParent();
             appBar=(AppBarLayout)contenedor.findViewById(R.id.appbar);
             tabs=new TabLayout(getActivity());
