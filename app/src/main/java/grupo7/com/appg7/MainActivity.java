@@ -83,7 +83,13 @@ public class MainActivity extends AppCompatActivity
 
         FragmentManager fragmentManager=getSupportFragmentManager();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_home) {
+
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new Fragments_Inicio()).commit();
+
+        }
+
+        else if (id == R.id.nav_camera) {
 
             fragmentManager.beginTransaction().replace(R.id.contenedor, new Fragments01()).commit();
 
