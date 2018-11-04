@@ -41,6 +41,9 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        FragmentManager fragmentManager=getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.contenedor, new Fragments_Inicio()).commit();
     }
 
     @Override
@@ -86,7 +89,6 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
 
             fragmentManager.beginTransaction().replace(R.id.contenedor, new Fragments_Inicio()).commit();
-
         }
 
         else if (id == R.id.nav_camera) {
