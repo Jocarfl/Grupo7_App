@@ -14,7 +14,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="HISTORIAK"
+        android:text="HISTORIAL"
         android:textSize="42dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
