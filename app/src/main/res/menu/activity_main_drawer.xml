@@ -38,5 +38,9 @@
                 android:title="Enviar" />
         </menu>
     </item>
-
+    <item
+        android:id="@+id/nav_cerrar_sesión"
+        android:icon="@drawable/ic_exit_to_app_black_24dp"
+        android:title="Cerrar Sesión"
+        android:visible="true" />
 </menu>
