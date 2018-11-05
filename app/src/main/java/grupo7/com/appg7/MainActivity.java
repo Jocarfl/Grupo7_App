@@ -115,6 +115,11 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_share) {
 
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/plain");
+            intent.putExtra(Intent.EXTRA_TEXT, "El mejor blog de android http://javaheros.blogspot.pe/");
+            startActivity(Intent.createChooser(intent, "Share with"));
+
         } else if (id == R.id.nav_send) {
 
         }else if (id == R.id.nav_cerrar_sesión) {

@@ -45,6 +45,7 @@ public class LoginActivity  extends AppCompatActivity {
                                     .build(),
                             new AuthUI.IdpConfig.GoogleBuilder().build(),//<<<<<<<<<<<<<
             new AuthUI.IdpConfig.FacebookBuilder().build()))
+            //new AuthUI.IdpConfig.PhoneBuilder().build()))
 
                     .setIsSmartLockEnabled(false)
                     .build(), RC_SIGN_IN);
