@@ -44,7 +44,7 @@ public class LoginActivity  extends AppCompatActivity {
                             new AuthUI.IdpConfig.EmailBuilder().setAllowNewAccounts(true)
                                     .build(),
                             new AuthUI.IdpConfig.GoogleBuilder().build(),//<<<<<<<<<<<<<
-            new AuthUI.IdpConfig.FacebookBuilder().build(),
+               new AuthUI.IdpConfig.FacebookBuilder().build(),
             new AuthUI.IdpConfig.PhoneBuilder().build()))
 
                     .setIsSmartLockEnabled(false)
