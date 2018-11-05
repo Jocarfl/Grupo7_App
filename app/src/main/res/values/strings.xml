@@ -15,4 +15,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="facebook_application_id" translatable="false">696361450745178</string>
+    <string name="facebook_login_protocol_scheme"
+        translatable="false">ebc8192f6cf089ed006480c8a34ae346</string>
+
 </resources>
