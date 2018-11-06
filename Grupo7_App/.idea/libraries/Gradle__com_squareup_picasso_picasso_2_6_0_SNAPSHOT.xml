@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.squareup.picasso:picasso-2.6.0-SNAPSHOT">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/picasso-2.6.0-SNAPSHOT.aar/5676aa2b12e68a0c050114cb471aac73/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/picasso-2.6.0-SNAPSHOT.aar/5676aa2b12e68a0c050114cb471aac73/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.6.0-SNAPSHOT/6683fd4939b2e0cbce99a55990a1f862e897a559/picasso-2.6.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
