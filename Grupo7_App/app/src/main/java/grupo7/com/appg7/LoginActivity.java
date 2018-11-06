@@ -1,4 +1,4 @@
-package grupo7.com.appg7;
+ package grupo7.com.appg7;
 
 
 import android.content.Intent;

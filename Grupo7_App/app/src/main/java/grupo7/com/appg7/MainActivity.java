@@ -230,6 +230,15 @@ public class MainActivity extends AppCompatActivity
 
             ImageView usuario_foto = (ImageView)header.findViewById(R.id.photoUser);
             Picasso.with(this).load(foto_usuario).into(usuario_foto);
+
+            if(usuario.getEmail() == null){
+                usuario_email.setText(numero_usuario);
+            }
+
+            if(usuario.getPhotoUrl()== null){
+                Picasso.with(this).load(fotoAuxiliar).into(usuario_foto);
+            }
+
         }
     }
 }
