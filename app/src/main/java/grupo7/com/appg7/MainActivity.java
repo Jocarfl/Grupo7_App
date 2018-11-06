@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
@@ -23,11 +24,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -62,6 +68,7 @@ public class MainActivity extends AppCompatActivity
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.contenedor, new Fragments_Inicio()).commit();
 
+        infoUsuario();
 
     }
 
@@ -199,5 +206,30 @@ public class MainActivity extends AppCompatActivity
                         MainActivity.this.finish();
                     }
                 });
+    }
+
+    public void infoUsuario(){
+        FirebaseUser usuario = FirebaseAuth.getInstance().getCurrentUser();
+
+        if(usuario != null){
+            String nombre_usario = usuario.getDisplayName();
+            String email_usuario = usuario.getEmail();
+            Uri foto_usuario = usuario.getPhotoUrl();
+            String numero_usuario = usuario.getPhoneNumber();
+
+            String fotoAuxiliar = "https://bit.ly/2zwrJ34";
+
+            NavigationView navigationView = (NavigationView)findViewById(R.id.nav_view);
+            View header = navigationView.inflateHeaderView(R.layout.nav_header_main);
+
+            TextView usuario_nombre = (TextView)header.findViewById(R.id.nameUser);
+            usuario_nombre.setText(nombre_usario);
+
+            TextView usuario_email = (TextView)header.findViewById(R.id.emailUser);
+            usuario_email.setText(email_usuario);
+
+            ImageView usuario_foto = (ImageView)header.findViewById(R.id.photoUser);
+            Picasso.with(this).load(foto_usuario).into(usuario_foto);
+        }
     }
 }
