@@ -23,7 +23,7 @@
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Herramientas" />
+            android:title="Preferencias" />
     </group>
 
     <item android:title="Communicación">
