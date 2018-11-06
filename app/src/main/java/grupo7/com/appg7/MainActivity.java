@@ -1,5 +1,6 @@
 package grupo7.com.appg7;
 
+
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -29,7 +30,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener  {
+        implements NavigationView.OnNavigationItemSelectedListener {
     private Button AcercaDe;
 
 
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        FragmentManager fragmentManager=getSupportFragmentManager();
+        FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.contenedor, new Fragments_Inicio()).commit();
 
 
@@ -102,7 +103,7 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    public void lanzarAcercaDe(View view){
+    public void lanzarAcercaDe(View view) {
         Intent i = new Intent(this, AcercaDeActivity.class);
         startActivity(i);
     }
@@ -127,14 +128,12 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        FragmentManager fragmentManager=getSupportFragmentManager();
+        FragmentManager fragmentManager = getSupportFragmentManager();
 
         if (id == R.id.nav_home) {
 
             fragmentManager.beginTransaction().replace(R.id.contenedor, new Fragments_Inicio()).commit();
-        }
-
-        else if (id == R.id.nav_camera) {
+        } else if (id == R.id.nav_camera) {
 
             fragmentManager.beginTransaction().replace(R.id.contenedor, new Fragments01()).commit();
 
@@ -159,7 +158,6 @@ public class MainActivity extends AppCompatActivity
             startActivity(sendIntent);
 
         } else if (id == R.id.nav_send) {
-
         }else if (id == R.id.nav_cerrar_sesión) {
             AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
 
@@ -179,6 +177,7 @@ public class MainActivity extends AppCompatActivity
             dialogo1.show();
 
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
